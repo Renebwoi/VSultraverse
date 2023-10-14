@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Ultraverse world
+        </title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <meta name="viewport"   content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="hi-tech.jpg" type="image/x-icon">
+    </head>
+    <body id="Cmode1" style="background-image: linear-gradient( purple , blueviolet);">
+        <div class="navigation" >
+            <nav>
+                <ul>
+                    <li class="list active"> 
+                        <a href="#"><!--online icon tag used here-->
+                            <span class="icon" id="Cmode2" onclick="Home()">
+                                <ion-icon name="home-outline"></ion-icon>
+                            </span>
+                            <span class="text" id="Cmode3">Home</span>
+                    </a>
+                    </li>
+                    
+                    <li class="list"> 
+                        <a href="#">
+                            <span class="icon" id="Cmode2" onclick="changeHome()"><!--use onclick to link the web pages in iframe-->
+                                <ion-icon name="book-outline"></ion-icon><!--icon tag example-->
+                            </span>
+                            <span class="text" id="Cmode3" >Stories</span>
+                    </a>
+                    </li>
+
+                    <li class="list"> 
+                        <a href="#">
+                            <span class="icon" id="Cmode2">
+                                <ion-icon name="people-outline"></ion-icon>
+                            </span>
+                            <span class="text" id="Cmode3">About</span>
+                    </a>
+                    </li>
+
+                    <li class="list"> 
+                        <a href="#">
+                            <span class="icon" id="Cmode2">
+                                <ion-icon name="earth-outline"></ion-icon>
+                            </span>
+                            <span class="text" id="Cmode3">Misc</span>
+                    </a>
+                    </li>
+
+                    <li class="list"> 
+                        <a href="#">
+                            <span class="icon" id="Cmode2">
+                                <ion-icon name="happy-outline"></ion-icon>
+                            </span>
+                            <span class="text" id="Cmode3">Extra</span>
+                    </a>
+                    </li>
+                    <div class="indicator" id ="Cmode4"></div>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="sTart"><!-- start header -->
+            <h1 name ="Cmode6"> Welcome to the UltraVerse</h1>
+            <p name ="Cmode6"> Lets Start Here</p><!-- it may be better to take the buttons below to the stories page-->
+            <a href="#"><button type="button" class="ThemeButton"> 1 </button></a><!-- change class later if it doesn't fit-->
+            <a href="#"><button type="button" class="ThemeButton"> 2 </button></a><!-- change class later if it doesn't fit-->
+        </div>
+
+        <div class="Theme"><!--to swap themes between light and dark-->
+            <p id="themes"><b> Themes </b></p>
+            <button type="button" class="ThemeButton" onclick="changeColorMode1()"> Dark</button>
+            <button type="button" class="ThemeButton" onclick="changeColorMode2()"> Light</button>
+        </div>
+        <!--now im embedding a html page here-->
+        <iframe src="base/base.html" id="pageEmbed" class="pageEmbed"></iframe>
+
+
+        <script src="index.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>

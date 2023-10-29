@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&family=Ubuntu&display=swap');
 *{
     margin: 0;
     box-sizing: border-box;
+    /*font-family: 'Playpen Sans', cursive; /*for the bodys*/
+    font-family: 'Ubuntu', sans-serif;
 }
 header nav{
     display: flex;
     align-items: center;
-    background-color: lightskyblue;
+    background-color: blueviolet;
+    color: gold;
     position: relative;
     height: 40px;
+}
+header nav:hover{
+    color: white;
 }
 header nav ul{
     list-style-type: none;
@@ -15,6 +22,10 @@ header nav ul{
     position: absolute;
     right: 5vw;
     gap: 20px;
+    color: gold;
+}
+.nav-li:hover{
+    color: whitesmoke;
 }
 #hero-section{
     background-image: url(newIdeaImages/Hero-Background.jpg);
@@ -39,15 +50,18 @@ svg{
   }
   
   text{
-    fill            : none;
-    stroke          : white;
-    stroke-width    : .5px;
+    fill            : gold;/* change to none for transparent text*/
+    stroke          : gold;
+    stroke-width    : .2px;
     stroke-linejoin : round;
-    animation       : 2s pulsate infinite;
+    animation       : 4s pulsate infinite;
+    animation-timing-function: ease;
   }
   
   @keyframes pulsate {
-    50%{ stroke-width: 1px }
+    50%{ stroke-width: .5px }
+    50%{ fill: none }
+    50%{ stroke: white }
   }
   /* it stops here */
 
@@ -65,9 +79,10 @@ svg{
     grid-template-columns: 50vw 50vw;
     height: 100vw;
     overflow: hidden;
+    background-color: blueviolet;
 }
 .book{
-    background-color: lightskyblue;
+    background-color: blueviolet;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -81,9 +96,22 @@ svg{
     position: relative;
     flex-direction: column;
     align-items: center;
-    transition-duration: 1s;
-    animation-name: UpFloat;
-    animation-duration: 6s;
+    background-color: rgb(215, 195, 224);
+    border-radius: 20px;
+    /* transition-duration: 1s; */
+    /* animation-name: UpFloat;
+    animation-duration: 6s; */
+
+}
+.move{
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+  
+.move.active{
+    transform: translateY(0);
+    opacity: 1;
 }
 
 @keyframes UpFloat {
@@ -92,8 +120,9 @@ svg{
 }
 
 .card:hover{
-    box-shadow: 0 0 30px blueviolet;
+    box-shadow: 0 0 30px gold;
     border-radius: 30px;
+    background-color: aliceblue;
     scale: 1.1; /*they said it's not mostly supported. might have to
      add width and height scaling for the others*/
 }
@@ -101,24 +130,25 @@ svg{
     margin-bottom: 30px;
 }
 .first-book-image{
-    width: 60%;
-    height: 60%;
+    width: 95%;
+    height: 70%;
     background-image: url(newIdeaImages/hi-tech.jpg);
     background-size: cover;
     /* background-attachment: fixed; /* for doing that nice window scroll effect*/
     background-position: center;
     border-radius: 30px;
-    margin-top: 50px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 .second-book-image{
-    width: 60%;
-    height: 60%;
+    width: 95%;
+    height: 70%;
     background-image: url(newIdeaImages/cosmic\ starkiller.jpg);
     background-size: cover;
+    background-position: center;
     border-radius: 30px;
-    margin-top: 50px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 30px;
     
 }
 
@@ -130,7 +160,7 @@ svg{
 #about-section{
     height: 600px;
     /* background-image: linear-gradient( lightskyblue, blueviolet); */
-    background-color: blueviolet;
+    background-color: whitesmoke;
 }
 .about-heading{
     text-align: center;
@@ -154,12 +184,21 @@ svg{
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 10px whitesmoke;
+    background-color: blueviolet;
+    border-radius: 30px;
 
     position: relative;
     top: 30px;
+    transition-duration: 1s;
+}
+.author:hover{
+    scale: 1.12;
+    box-shadow: 0 0 30px lightgoldenrodyellow;
 }
 .knot-image{
     width: 20vw;
+    display: grid;
+    place-items: center;
 }
 .profile{
     width: 15vw;
@@ -168,6 +207,7 @@ svg{
     background-color: yellow;
 
     margin-top: 5vw;
+    margin-bottom: 5vw;
 }
 .circle1{
     background-image: url(newIdeaImages/hi-tech.jpg);
@@ -187,13 +227,21 @@ svg{
 
 #image-gallery{
     height: 300px;
-    background-color: blue;
+    background-color: blueviolet;
     overflow: hidden;
 }
 .slide-pics{
     width: 20vw;
     height: 80%;
     background-color: aliceblue;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    transition-duration: 1s;
+}
+.slide-pics:hover{
+    scale:1.2;
+    box-shadow: 0 0 25px black;
 }
 .slide-div{
     display: grid;
@@ -212,11 +260,51 @@ svg{
     from{margin-left: -3vw;}
     to{margin-left: -65vw;}
 }
+.slide1{
+    background-image: url(newIdeaImages/fantasy-4032943_1280.jpg);
+}
+.slide2{
+    background-image: url(newIdeaImages/boy-dark-dragons\ 1280.png);
+}
+.slide3{
+    background-image: url(newIdeaImages/girl-and-clock_640.jpg);
+    background-size: 25vw 20vw;
+}
+.slide4{
+    background-image: url(newIdeaImages/green-forest-girl\ 1280.jpg);
+}
+.slide5{
+    background-image: url(newIdeaImages/hi-tech.jpg);
+}
+.slide6{
+    background-image: url(newIdeaImages/cosmic\ starkiller.jpg);
+}
+.slide7{
+    background-image: url(newIdeaImages/boy-dark-dragons.png);
+}
+.slide8{
+    background-image: url(newIdeaImages/girl-and-clock_1280.jpg);
+    background-size: 25vw 20vw;
+}
 
 
 
 
 footer{
     height: 100px;
-    background-color: chartreuse;
+    background-color: blueviolet;
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
+}
+footer hr{
+    border-width: 2px;
+    border-color: gold;
+
+    width: 80vw;
+    margin-left: 10vw;
+}
+footer p{
+    margin-top: 30px;
+    color: gold;
 }

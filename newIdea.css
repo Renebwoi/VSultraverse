@@ -22,13 +22,201 @@ header nav ul{
 
     display: grid;
     place-items: center;
+    overflow: hidden;
 }
-#hero-section h1{
-    color: white;
+/* #hero-section h1{
+    color: rgba(0, 0, 0, 0.5);
     font-size: 5vw;
     transition-duration: 1s;
-}
+} */
+
+/* it starts here */
+svg{
+    font   : bold 30px Century Gothic, Arial;
+    width  : 80vw;
+    height : 120px;
+    margin: 0 25vw;
+  }
+  
+  text{
+    fill            : none;
+    stroke          : white;
+    stroke-width    : .5px;
+    stroke-linejoin : round;
+    animation       : 2s pulsate infinite;
+  }
+  
+  @keyframes pulsate {
+    50%{ stroke-width: 1px }
+  }
+  /* it stops here */
+
 #hero-section h1:hover{
     color: rgb(202, 32, 202);/*to be masked later😎 I wanna make 
     it transparent but with black outlines on hover*/
+}
+
+
+
+
+
+#books-section{
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    height: 100vw;
+    overflow: hidden;
+}
+.book{
+    background-color: lightskyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 70%;
+    height: 70%;
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    transition-duration: 1s;
+    animation-name: UpFloat;
+    animation-duration: 6s;
+}
+
+@keyframes UpFloat {
+    from{margin-top: 600px;}
+    to{margin-top: 0px;}
+}
+
+.card:hover{
+    box-shadow: 0 0 30px blueviolet;
+    border-radius: 30px;
+    scale: 1.1; /*they said it's not mostly supported. might have to
+     add width and height scaling for the others*/
+}
+.card h4{
+    margin-bottom: 30px;
+}
+.first-book-image{
+    width: 60%;
+    height: 60%;
+    background-image: url(newIdeaImages/hi-tech.jpg);
+    background-size: cover;
+    /* background-attachment: fixed; /* for doing that nice window scroll effect*/
+    background-position: center;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.second-book-image{
+    width: 60%;
+    height: 60%;
+    background-image: url(newIdeaImages/cosmic\ starkiller.jpg);
+    background-size: cover;
+    border-radius: 30px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    
+}
+
+
+
+
+
+
+#about-section{
+    height: 600px;
+    /* background-image: linear-gradient( lightskyblue, blueviolet); */
+    background-color: blueviolet;
+}
+.about-heading{
+    text-align: center;
+    font-size: 3vw;
+
+    padding-top: 30px;
+}
+.about-content{
+    height: 70%;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+}
+.author{
+    height: 400px;
+    width: 30vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 10px whitesmoke;
+
+    position: relative;
+    top: 30px;
+}
+.knot-image{
+    width: 20vw;
+}
+.profile{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    background-color: yellow;
+
+    margin-top: 5vw;
+}
+.circle1{
+    background-image: url(newIdeaImages/hi-tech.jpg);
+    background-size: cover;
+}
+.circle2{
+    background-image: url(newIdeaImages/hi-tech.jpg);
+    background-size: cover;
+}
+/* .demiurge{
+    margin-left: 5vw;
+} */
+
+
+
+
+
+#image-gallery{
+    height: 300px;
+    background-color: blue;
+    overflow: hidden;
+}
+.slide-pics{
+    width: 20vw;
+    height: 80%;
+    background-color: aliceblue;
+}
+.slide-div{
+    display: grid;
+    grid-template-columns: 20vw 20vw 20vw 20vw 20vw 20vw 20vw 20vw;
+    gap: 10px;
+    place-items: center;
+
+    height: 280px;
+    margin-left: 0vw;
+    animation-name: Sliding;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes Sliding{
+    from{margin-left: -3vw;}
+    to{margin-left: -65vw;}
+}
+
+
+
+
+footer{
+    height: 100px;
+    background-color: chartreuse;
 }

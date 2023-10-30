@@ -27,6 +27,19 @@ header nav ul{
 .nav-li:hover{
     color: whitesmoke;
 }
+.nav-links{
+    color: gold;
+    text-decoration: none;
+}
+.nav-links:hover{
+    color: whitesmoke;
+}
+
+
+
+
+
+
 #hero-section{
     background-image: url(newIdeaImages/Hero-Background.jpg);
     height: 400px;
@@ -132,14 +145,15 @@ svg{
 .card p{
     width: 80%;
     margin-bottom: 15px;
+    text-align: center;
 }
 .first-book-image{
     width: 95%;
     height: 350px;
-    background-image: url(newIdeaImages/hi-tech.jpg);
+    background-image: url(newIdeaImages/boy-dark-dragons\ 1280.png);
     background-size: cover;
     /* background-attachment: fixed; /* for doing that nice window scroll effect*/
-    background-position: center;
+    background-position: 0 30%;
     border-radius: 30px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -147,9 +161,9 @@ svg{
 .second-book-image{
     width: 95%;
     height: 350px;
-    background-image: url(newIdeaImages/cosmic\ starkiller.jpg);
+    background-image: url(newIdeaImages/Cosmic\ Starkill\ 0.png);
     background-size: cover;
-    background-position: center;
+    background-position: bottom;
     border-radius: 30px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -190,6 +204,7 @@ svg{
     box-shadow: 0 0 10px whitesmoke;
     background-color: blueviolet;
     border-radius: 30px;
+    font-size: 1.5rem;
 
     position: relative;
     top: 30px;
@@ -198,12 +213,22 @@ svg{
 .author:hover{
     scale: 1.12;
     box-shadow: 0 0 30px lightgoldenrodyellow;
+
+    color: gold;
+    font-size: 3rem;
 }
 .knot-image{
     width: 20vw;
     display: grid;
     place-items: center;
+    
 }
+/* #the-knot-image{
+    transition-duration: 1s;
+}
+#the-knot-image:hover{
+    transform: rotateY('180');
+} wanted to make the knot do a rotate animation on hover*/
 .profile{
     width: 15vw;
     height: 15vw;
@@ -211,15 +236,16 @@ svg{
     background-color: yellow;
 
     margin-top: 5vw;
-    margin-bottom: 5vw;
+    margin-bottom: 3vw;
 }
 .circle1{
-    background-image: url(newIdeaImages/hi-tech.jpg);
+    background-image: url(newIdeaImages/halloween-8298982_1920.jpg);
     background-size: cover;
 }
 .circle2{
-    background-image: url(newIdeaImages/hi-tech.jpg);
+    background-image: url(newIdeaImages/owl-7744852_1280.jpg);
     background-size: cover;
+    background-position: -100px -10px;
 }
 /* .demiurge{
     margin-left: 5vw;
@@ -271,7 +297,7 @@ svg{
     background-image: url(newIdeaImages/boy-dark-dragons\ 1280.png);
 }
 .slide3{
-    background-image: url(newIdeaImages/girl-and-clock_640.jpg);
+    background-image: url(newIdeaImages/tiger-man.jpg);
     background-size: 25vw 20vw;
 }
 .slide4{
@@ -287,7 +313,7 @@ svg{
     background-image: url(newIdeaImages/boy-dark-dragons.png);
 }
 .slide8{
-    background-image: url(newIdeaImages/girl-and-clock_1280.jpg);
+    background-image: url(newIdeaImages/castle-7696633_1280.jpg);
     background-size: 25vw 20vw;
 }
 
@@ -338,4 +364,10 @@ svg{
 .about-heading{
     font-size: 2rem;
 }/* try to change every hover state to focus or active later*/
+.slide-pics{
+    min-width: 200px;
+}
+.slide-div{
+    grid-template-columns: 200px 200px 200px 200px 200px 200px 200px 200px;
+}
 }

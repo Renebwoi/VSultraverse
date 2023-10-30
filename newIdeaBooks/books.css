@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans&family=Ubuntu&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+    /*font-family: 'Playpen Sans', cursive; /*for the bodys*/
+    font-family: 'Ubuntu', sans-serif;
+}
+header{
+    position: sticky;
+    top:0px;
+    box-shadow: 0 3px gold;
+
+    z-index: 1;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    background-color: blueviolet;
+    color: gold;
+    position: relative;
+    top: 0px;
+    height: 40px;
+}
+header nav:hover{
+    color: white;
+}
+header nav ul{
+    list-style-type: none;
+    display: flex;
+    position: absolute;
+    right: 5vw;
+    gap: 20px;
+    color: gold;
+}
+.nav-li:hover{
+    color: whitesmoke;
+}
+.nav-links{
+    color: gold;
+    text-decoration: none;
+}
+.nav-links:hover{
+    color: whitesmoke;
+}
+#booksli{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    min-width: 80px;
+    min-height: 15px;
+    text-align: center;
+}
+#booksli:hover{
+    color: black;
+    font-weight: bold;
+}
+
+
+
+
+#hero-section{
+    background-image: url(../newIdeaImages/Hero-Background.jpg);
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+    height: 250px;
+
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+
+
+
+#books-section{
+    display: grid;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    height: 1024px;
+    overflow: hidden;
+    background-color: blueviolet;
+
+    z-index: 2;
+}
+.book{
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    width: 90%;
+    height: 70%;
+
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(215, 195, 224);
+    border-radius: 20px;
+    /* transition-duration: 1s; */
+    /* animation-name: UpFloat;
+    animation-duration: 6s; */
+
+}
+.move{
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 2s all ease;
+}
+  
+.move.active{
+    transform: translateY(0);
+    opacity: 1;
+}
+
+@keyframes UpFloat {
+    from{margin-top: 600px;}
+    to{margin-top: 0px;}
+}
+
+.card:hover{
+    box-shadow: 0 0 30px gold;
+    border-radius: 30px;
+    background-color: aliceblue;
+    scale: 1.1; /*they said it's not mostly supported. might have to
+     add width and height scaling for the others*/
+}
+.card h4{
+    margin-bottom: 20px;
+    text-align: center;
+}
+.card p{
+    width: 80%;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.first-book-image{
+    width: 95%;
+    height: 350px;
+    background-image: url(../newIdeaImages/boy-dark-dragons\ 1280.png);
+    background-size: cover;
+    /* background-attachment: fixed; /* for doing that nice window scroll effect*/
+    background-position: 0 30%;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.second-book-image{
+    width: 95%;
+    height: 350px;
+    background-image: url(../newIdeaImages/Cosmic\ Starkill\ 0.png);
+    background-size: cover;
+    background-position: bottom;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+}
+
+
+
+
+footer{
+    height: 100px;
+    background-color: blueviolet;
+    text-align: center;
+    /* display: flex;
+    justify-content: center; */
+}
+footer hr{
+    border-width: 2px;
+    border-color: gold;
+
+    width: 80vw;
+    margin-left: 10vw;
+}
+footer p{
+    margin-top: 30px;
+    color: gold;
+}
+@media screen and (max-width:750px) {
+    #books-section{
+        grid-template-columns: 100vw;
+        min-height: 4000px;
+    }
+}

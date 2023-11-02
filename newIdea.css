@@ -101,6 +101,15 @@ svg{
     justify-content: center;
     align-items: center;
 }
+
+.book a{
+    width:100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+    color:black;
+}
 .card{
     width: 70%;
     height: 70%;

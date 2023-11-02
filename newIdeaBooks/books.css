@@ -48,6 +48,8 @@ header nav ul{
     min-width: 80px;
     min-height: 15px;
     text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 #booksli:hover{
     color: black;

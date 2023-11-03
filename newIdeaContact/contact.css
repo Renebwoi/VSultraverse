@@ -53,7 +53,7 @@ header nav ul{
 body{
     background-image: radial-gradient(blueviolet, purple);
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 200vh;
 
     display: flex;
     flex-direction: column;
@@ -100,7 +100,7 @@ body{
 .icon{
     height: 50px;
     width:50px;
-    background-color: black;
+    /* background-color: black; */
 }
 .group{
     display:flex;
@@ -121,4 +121,39 @@ body{
 }
 .links:hover{
     color: blueviolet;
+}
+.gmail{
+    background-image: url(../newIdeaImages/icons8-gmail-94.png);
+    background-size: cover;
+}
+.facebook{
+    background-image: url(../newIdeaImages/icons8-facebook-messenger-94.png);
+    background-size: cover;
+}
+.whatsapp{
+    background-image: url(../newIdeaImages/icons8-whatsapp-94.png);
+    background-size: cover;
+}
+
+@media screen and (max-width:570px) {
+    .allContact{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+    .group{
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    .contact-div{
+        width:70vw;
+    }
+    .facebook-n-others{
+        height: 250px;
+    }
+    a.links{
+        height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }

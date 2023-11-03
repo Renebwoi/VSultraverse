@@ -378,5 +378,13 @@ svg{
 }
 .slide-div{
     grid-template-columns: 200px 200px 200px 200px 200px 200px 200px 200px;
+    animation-duration: 15s;
+}
+@keyframes Sliding{
+    from{margin-left: -30px;}
+    to{margin-left: -950px;}
+}
+.slide3{
+    background-size: cover;
 }
 }

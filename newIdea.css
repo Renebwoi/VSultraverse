@@ -35,6 +35,22 @@ header nav ul{
     color: whitesmoke;
 }
 
+.nav-linksmobile{
+    color: blueviolet;
+    text-decoration: none;
+}
+.nav-linksmobile:hover{
+    color: gold;
+}
+
+
+.small-screen-icon{
+    display: none;
+}
+.manu{
+    display: none;
+}
+
 
 
 
@@ -387,4 +403,101 @@ svg{
 .slide3{
     background-size: cover;
 }
+}
+
+
+/* start the replication here*/
+@media screen and (max-width:570px) {
+    header nav ul{
+        display: none;
+    }
+    .small-screen-icon{
+        display: inline-flex;
+        flex-direction: column;
+        width: 30px;
+        height: 30px;
+        /* overflow: hidden; */
+    
+        position: absolute;
+        top: 15px;
+        right: 20px;
+       }
+     
+    .stick{
+    background-color: white;
+    width: 25px;
+    height: 2px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    }
+
+    /* .small-screen-icon:active{
+    background-color: black;
+    } */
+
+
+    .manu{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        align-items: center;
+
+        width: 85vw;
+        height: 70vw;
+        border-radius: 30px;
+        box-shadow: 0 0 15px gold;
+        background-color: white;
+        top:20vw;
+        /* left:50%; */
+        margin-left: 10%;
+        margin-right: 15%;
+        z-index: 4;
+        /* transition: all 2s; */
+        animation-name: floatIn;
+        animation-duration: 2s;
+
+   }
+   @keyframes floatIn {
+        from{
+            transform: translateY(-200px);
+        }
+        to{
+            transform: translateY(0px);
+        }
+
+        0%{
+            opacity: 0%;
+        }
+        50%{
+            opacity: 5%;
+        }
+        100%{
+            opacity: 100%;
+        }
+   }
+
+   .manu-items{
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: blueviolet;
+    font-weight: bold;
+   }
+   #manu-about{
+    margin-top: 40px;
+   }
+   .manu-contact{
+    font-size: 1rem;
+    font-family: "Fraunces";
+    width: 40%;
+    height: 15%;
+    background-color: yellow;
+    color: blueviolet;
+    font-weight: bold;
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   }
 }

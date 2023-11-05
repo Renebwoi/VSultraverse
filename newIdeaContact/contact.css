@@ -188,6 +188,8 @@ body{
         position: absolute;
         top: 15px;
         right: 20px;
+
+        cursor: pointer;
        }
      
     .stick{
@@ -196,10 +198,61 @@ body{
     height: 2px;
     border-radius: 10px;
     margin-bottom: 5px;
+    
+    position: relative;
+    transform: rotate(0);
+    transition: all 2s;
     }
 
-    /* .small-screen-icon:active{
-    background-color: black;
+    .stick2{
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        animation-delay: 1.5s;
+        animation-fill-mode: both;
+    }
+    @keyframes fadeIn {
+        from{
+            opacity: 0%;
+        }
+        to{
+            opacity: 100%;
+        }
+    }
+
+     /* was trying to animate the menu mobile sticks with only css. had to use js later
+     .small-screen-icon:active{ .stick1{
+        
+        animation-name: turnDown;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    .stick2{
+        display: none;
+    }
+    .stick3{
+        
+        animation-name: turnUp;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+    }
+    }
+
+    @keyframes turnDown {
+        from {
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(60deg);
+        }
+    }
+    @keyframes turnUp {
+        from {
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(-60deg);
+        }
     } */
 
 

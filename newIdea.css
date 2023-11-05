@@ -421,6 +421,8 @@ svg{
         position: absolute;
         top: 15px;
         right: 20px;
+
+        cursor: pointer;
        }
      
     .stick{
@@ -429,8 +431,26 @@ svg{
     height: 2px;
     border-radius: 10px;
     margin-bottom: 5px;
+
+    position: relative;
+    transform: rotate(0);
+    transition: all 2s;
     }
 
+    .stick2{
+        animation-name: fadeIn;
+        animation-duration: 0.5s;
+        animation-delay: 1.5s;
+        animation-fill-mode: both;
+    }
+    @keyframes fadeIn {
+        from{
+            opacity: 0%;
+        }
+        to{
+            opacity: 100%;
+        }
+    }
     /* .small-screen-icon:active{
     background-color: black;
     } */

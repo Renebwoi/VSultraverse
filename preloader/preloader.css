@@ -1,0 +1,19 @@
+.preloader{
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(icegif-710.gif);
+    background-color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10%;
+
+    display: grid;
+    place-items: center;
+}
+.preloader p {
+    color: blueviolet;
+    margin-top: 150px;
+    font-weight: 700;
+}

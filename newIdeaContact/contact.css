@@ -109,9 +109,9 @@ body{
     align-items: center;
     justify-content: center;
 }
-/* .facebook-n-others{
-    display: inline-flex;
-} */
+.facebook-n-others{
+    margin-top: 50px;
+}
 .icon{
     height: 50px;
     width:50px;
@@ -124,6 +124,10 @@ body{
 }
 .g2{
     margin-bottom: 20px;
+}
+#firstlink, #secondlink{
+    min-width: 160px;
+    height: 20px;
 }
 .links{
     background-color: gold;
